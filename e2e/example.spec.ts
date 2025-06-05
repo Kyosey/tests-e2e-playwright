@@ -29,13 +29,13 @@ test("test", async ({ page }) => {
 
 test.describe("Compteur", () => {
   test("devrait afficher 0 au démarrage", async ({ page }) => {
-    await page.goto("http://127.0.0.1:5173/");
+    await page.goto("http://localhost:5173/");
     const counter = await page.getByTestId("counter");
     await expect(counter).toHaveText("count is 0");
   });
 
   test("devrait afficher 2 après deux clics sur +", async ({ page }) => {
-    await page.goto("http://127.0.0.1:5173/");
+    await page.goto("http://localhost:5173/");
     const button = await page.getByTestId("counter");
     await button.click();
     await button.click();
