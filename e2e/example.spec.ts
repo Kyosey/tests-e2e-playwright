@@ -19,13 +19,13 @@ test("get started link", async ({ page }) => {
   ).toBeVisible();
 });
 
-test("test", async ({ page }) => {
-  await page.goto("https://www.google.fr/");
-  await page.getByRole("button", { name: "Tout refuser" }).click();
-  await page.getByRole("combobox", { name: "Rech." }).click();
-  await page.getByRole("combobox", { name: "Rech." }).fill("playw");
-  await page.getByRole("combobox", { name: "Rech." }).press("ArrowDown");
-});
+// test("test", async ({ page }) => {
+//   await page.goto("https://www.google.fr/");
+//   await page.getByRole("button", { name: "Tout refuser" }).click();
+//   await page.getByRole("combobox", { name: "Rech." }).click();
+//   await page.getByRole("combobox", { name: "Rech." }).fill("playw");
+//   await page.getByRole("combobox", { name: "Rech." }).press("ArrowDown");
+// });
 
 test.describe("Compteur", () => {
   test("devrait afficher 0 au démarrage", async ({ page }) => {
